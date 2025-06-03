@@ -11,19 +11,19 @@ function App() {
             .then(data => setPhotos(data));
     }, []);
 
-    return (
-        <div>
-            <h1>Galeri Foto</h1>
-            <ul>
-                {photos.map(photo => (
-                    <li key= {photo.id}>
-                        <img src={photo.thumnailUrl} alt = {photo.title} width ="150" />
-                        <p>{photo.title}</p>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    )
+  return (
+    <div>
+      <h1>Galeri Foto</h1>
+      <ul>
+        {photos.map(photo => (
+          <li key={photo.id}>
+            <img src={photo.thumnailUrl} alt={photo.title} width="150" />
+            <p>{photo.title}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 export default App;
