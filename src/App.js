@@ -29,6 +29,7 @@ function App() {
           <div
             key={photo.id}
             style={{
+              color: '#444',
               backgroundColor: '#fff',
               borderRadius: '12px',
               overflow: 'hidden',
@@ -36,8 +37,16 @@ function App() {
               transition: 'transform 0.2s',
               cursor: 'pointer'
             }}
-            onMouseOver={e => e.currentTarget.style.transform = 'scale(1.03)'}
-            onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
+            onMouseOver={e => {
+              e.currentTarget.style.transform = 'scale(1.03)' 
+              e.currentTarget.style.backgroundColor = '#45322E';
+              e.currentTarget.style.color = '#fff';
+            }}
+            onMouseOut={e => {
+              e.currentTarget.style.transform = 'scale(1)' 
+              e.currentTarget.style.backgroundColor = '#fff';
+              e.currentTarget.style.color = '#444';
+            }}
           >
             <img
               src={photo.thumbnailUrl}
@@ -45,8 +54,8 @@ function App() {
               style={{ width: '100%', height: '200px', objectFit: 'cover' }}
             />
             <div style={{ padding: '10px' }}>
-              <h3 style={{ margin: '0 0 5px 0', fontSize: '18px', color: '#444' }}>{photo.title}</h3>
-              <p style={{ margin: 0, fontSize: '14px', color: '#666' }}>{photo.description}</p>
+              <h3 style={{ margin: '0 0 5px 0', fontSize: '18px'}}>{photo.title}</h3>
+              <p style={{ margin: 0, fontSize: '14px'}}>{photo.description}</p>
             </div>
           </div>
         ))}
