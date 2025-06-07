@@ -36,7 +36,7 @@ function App() {
               transition: 'transform 0.2s',
               cursor: 'pointer'
             }}
-            onMouseOver={e => e.currentTarget.style.transform = 'scale(1.03), rgba(0,0,0,1)'}
+            onMouseOver={e => e.currentTarget.style.transform = 'scale(1.03)'}
             onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
           >
             <img
