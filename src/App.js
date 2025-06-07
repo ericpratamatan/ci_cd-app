@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', backgroundColor: '#f4f4f4', minHeight: '100vh' }}>
-      <h1 style={{ textAlign: 'center', color: '#333', marginBottom: '40px' }}>Gambar Pemandangan</h1>
+      <h1 style={{ textAlign: 'center', color: '#333', marginBottom: '40px' }}>Gambar Random</h1>
       <div
         style={{
           display: 'grid',
